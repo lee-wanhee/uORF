@@ -45,7 +45,7 @@ class MultiscenesDataset(BaseDataset):
         filenames = sorted(list(filenames_set))
         self.scenes = []
         for i in range(self.n_scenes):
-            scene_filenames = [x for x in filenames if 'sc{:04d}'.format(i) in x]
+            scene_filenames = [x for x in filenames if 'sc{:04d}_frame5'.format(i) in x]
             self.scenes.append(scene_filenames)
 
     def _transform(self, img):
